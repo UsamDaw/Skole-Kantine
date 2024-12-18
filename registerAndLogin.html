@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login - Unhealthiez</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="registerAndLogin.css">
+    <script type="module" src="firebaseauth.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="1719420.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="signup" style="display:none;">
+      <h1 class="form-title">SIGN UP AND START HAVING FUN!</h1>
+      <form method="post" action="">
+        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="fName" placeholder="First Name" required>
+          <label for="fName">First Name</label>
+          <small id="fNameError" style="color: rgb(250, 45, 45); display: none;">First name cannot longer than 15 characters</small>
+      </div>
+      <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="lName" placeholder="Last Name" required>
+          <label for="lName">Last Name</label>
+          <small id="lNameError" style="color: rgb(250, 45, 45); display: none;">Last name cannot be longer than 15 characters</small>
+      </div>      
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email"  id="rEmail" placeholder="Email" required>
+            <label for="rEmail">Email</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="rPassword"  placeholder="Password" required>
+            <label for="rPassword">Password</label>
+        </div>
+       <button class="btn" id="submitSignUp">Sign Up</button>
+      </form>
+      <p class="or">
+      or
+      </p>
+      <div class="icons">
+        <i class="fab fa-google"></i>
+        <i class="fa-brands fa-microsoft"></i>
+        <i class="fa-brands fa-yahoo"></i>
+      </div>
+      <div class="links">
+        <p>Already have an account?</p>
+        <button id="signInButton">Sign In</button>
+      </div>
+    </div>
+
+  <div class="container" id="signIn">
+        <h1 class="form-title">Login to <span style="color: rgb(0, 0, 0); text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; font-family: Rubik Dirt, system-ui; font-size: 25px; font-weight: 400; font-style: normal;">Unhealthiez</span></h1>
+        <form method="post" action="">
+          <div id="signInMessage" class="messageDiv" style="display: flex; justify-content: left; color: #ff0000;"></div>
+<br><br>
+          <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email"  id="email" placeholder="Email" required>
+              <label for="email">Email</label>
+          </div>
+          <div class="input-group">
+              <i class="fas fa-lock"></i>
+            <input type="password" id="password"  placeholder="Password" required>
+              <label for="password">Password</label>
+          </div>
+          <p class="recover">
+            <a href="#">Recover Password</a>
+          </p>
+         <button  class="btn"  id="submitSignIn">Log In</button>
+        </form>
+        <p class="or">
+        or
+        </p>
+        <div class="icons">
+          <i class="fab fa-google"></i>
+          <i class="fa-brands fa-microsoft"></i>
+          <i class="fa-brands fa-yahoo"></i>
+        </div>
+        <div class="links">
+          <p>Don't have an account?</p>
+          <button id="signUpButton">Sign Up</button>
+        </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>

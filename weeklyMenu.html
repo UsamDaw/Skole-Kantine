@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Menu - Unhealthiez</title>
+    <link rel="stylesheet" href="weeklyMenu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="1719420.png"/>
+</head>
+<body>
+    <button class="logout-btn" id="logoutButton" onclick="logout()">Logout</button>
+    <a href="homepage.html"><button class="homepage-btn">Homepage</button></a>
+
+    <div id="navigation">
+        <span style="color: rgb(0, 0, 0); text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; font-family: Rubik Dirt, system-ui; font-size: 60px; font-style: normal;">Unhealthiez</span>
+        <h1>Weekly Menu</h1>
+    </div>
+    <a href="adminPanel.html" id="adminPanelButton">Admin Panel</a>
+    <div id="menuContainer" class="menu-container"></div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyA9qKrgjuKDmh5_VOqqT870_Lz8haWdXNU",
+          authDomain: "thecanteenlogin.firebaseapp.com",
+          databaseURL: "https://thecanteenlogin-default-rtdb.firebaseio.com",
+          projectId: "thecanteenlogin",
+          storageBucket: "thecanteenlogin.appspot.com",
+          messagingSenderId: "699730458810",
+          appId: "1:699730458810:web:162822e6cad5467f3e6a83"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        window.db = getDatabase(app);
+        function logout() {
+        alert('You have been logged out!');
+        window.location.href = 'login.html'; 
+    }
+    </script>
+
+      <script type="module" src="weeklyMenu.js"></script>
+      <script type="module" src="firebaseauth.js"></script>
+
+</body>
+</html>

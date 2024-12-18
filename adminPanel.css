@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 8rem;
+    background-size: cover; 
+    background-attachment: fixed; 
+}
+
+.weeklyMeny {
+    background-color: rgb(133, 211, 143);
+    width: 550px;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.weeklyMeny h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+#weeklyItemsGUI {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#weeklyItemsGUI input[type="text"],
+#weeklyItemsGUI input[type="file"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#weeklyItemsGUI input[type="file"] {
+    display: none;
+}
+
+#foodPrice {
+    padding: 0.8rem;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.file-label {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+}
+
+.file-label:hover {
+    background-color: rgb(200, 230, 200);
+    border-color: rgb(100, 190, 100);
+}
+
+.submit-btn {
+    background-color: #1d8348;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #145a32;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+input:focus {
+    outline: none;
+    border-color: rgb(100, 190, 100);
+    box-shadow: 0 0 5px rgba(100, 190, 100, 0.5);
+}
+
+.submit-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin: 4rem 1rem;
+        flex-direction: column;
+        background-size: cover; 
+    }
+
+    .weeklyMeny {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    #weeklyItemsGUI input[type="text"],
+    #weeklyItemsGUI input[type="file"] {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover; 
+    }
+
+    .weeklyMeny h2 {
+        font-size: 1.5rem;
+    }
+
+    #weeklyItemsGUI input[type="text"],
+    #weeklyItemsGUI input[type="file"] {
+        max-width: 100%;
+    }
+}

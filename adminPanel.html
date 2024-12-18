@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Panel - Unhealthiez</title>
+    <link rel="shortcut icon" type="image/x-icon" href="1719420.png"/>
+    <link rel="stylesheet" href="adminPanel.css">
+</head>
+<body>
+    <div class="weeklyMeny">
+        <h2>Weekly Menu Entry</h2>
+        <div id="weeklyItemsGUI">
+            <input type="text" id="foodName" placeholder="Name of the food">
+            <input type="text" id="foodDescription" placeholder="Description">
+            <input type="number" id="foodPrice" placeholder="Price (NOK)">
+            <label for="foodImage" class="file-label">Upload Food Image</label>
+            <input type="file" id="foodImage">
+            <button type="submit" class="submit-btn"><a href="weeklyMenu.html">Sumbit</a></button>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
+        import { getStorage } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-storage.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyA9qKrgjuKDmh5_VOqqT870_Lz8haWdXNU",
+          authDomain: "thecanteenlogin.firebaseapp.com",
+          databaseURL: "https://thecanteenlogin-default-rtdb.firebaseio.com",
+          projectId: "thecanteenlogin",
+          storageBucket: "thecanteenlogin.appspot.com",
+          messagingSenderId: "699730458810",
+          appId: "1:699730458810:web:162822e6cad5467f3e6a83"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        window.db = getDatabase(app);
+        window.storage = getStorage(app);
+    </script>
+
+    <script type="module" src="adminPanel.js"></script>
+    
+</body>
+</html>

@@ -1,25 +1,53 @@
-# README for Unhealthiez Prosjekt
+# Projsekt Unhealthiez
 
-## Om prosjektet
-Dette prosjektet er en nettside om skolens kafeteria "Unhealthiez". Hele prosjektet har flere sider. Dessverre kunne ikke administrasjonspanelet fikses på grunn av mange problemer. Nettstedet bruker HTML, CSS og JavaScript for front-end og Firebase for backend.
+Dette prosjektet er en enkel nettside for en skolekantine. Prosjektet ble opprettet ved hjelp av HTML, CSS, JavaScript og Firebase, og det følger universelle designprinsipper for å sikre tilgjengelighet.
 
-## Planen min
-- Ukens meny: Viser matvarer med navn, beskrivelse, pris og bilde hentet fra Firebase Firestore.
-- Andre produkter: Viser flere varer tilgjengelig i kantinen.
-- Administratorpanel: Lar administratorer legge til matvarer med navn, beskrivelse, pris og bilde. Data lagres i Firebase Firestore og bildene lastes opp til Firebase Storage.
-- Påloggings/registreringsalternativer: Logg på eller registrering via Google, Microsoft eller Yahoo!
-- Passordgjenoppretting: gjenopprett passordet ditt ved å skrive inn e-postadressen din.
 
-## Funksjoner 
-- Logg inn/registrer deg: Kan opprette eller logge på din egen konto.
-- Brukernavngrense: Opprettingsgrensen for brukernavn er på 15 tegn.
-- Logg ut: Logg av kontoen din
-- 
+## Funksjoner
 
-## Hvordan bruke nettsiden
-- Installer avhengigheter: Firebase brukes som backend, og du trenger en Firebase-prosjektkonfigurasjon.
-- Konfigurer Firebase: Erstatt Firebase-konfigurasjonen i "adminPanel.js" og "weeklyMenu.js" med dine egne Firebase-detaljer.
-- Gå til lenken i beskrivelsen for å skjekke nettsiden.
+- Brukerregistrering og pålogging: Brukere kan opprette en konto og logge på for å få tilgang til personlige funksjoner som å se på menyen.
+- Matkategorimeny: Nettstedet viser kategorier på mat på hjemmesiden.
+- Responsiv design: Nettstedet er designet for å fungere godt på både stasjonære og mobile enheter.
 
-## Kjent problem
-- Administratorpanelet fungerer ikke som forventet. Det oppdaterer ikke ukens meny på riktig måte, og data lagres ikke som planlagt i Firebase.
+
+## Kjente problemer
+
+- Administrasjonspanel for ukemeny: Administrasjonspanelet hadde til hensikt å plassere elementer på ukemenyen, men fungerer dessverre ikke på grunn av Firebase-problemer. Plassering av bestillinger eller sporing av ordrehistorikk er utilgjengelig.
+- Matkategorimeny: Alle kategoriene er utilgjengelige bortsett fra "Ukemeny".
+- Passordgjenoppretting: Gjenoppretting av passord er utilgjengelig.
+- Påloggingsalternativer: Logging med Google, Microsoft eller Yahoo! er ikke tilgjengelig.
+
+
+## Filer/programmer brukt
+
+- HTML: Strukturerer innholdet på nettstedet.
+- CSS: Styler nettstedet som gjør det visuelt tiltalende.
+- JavaScript: Legger til interaktivitet og gjør brukerhandlinger.
+- Firebase: Tilbyr backend-tjenester som autentisering og databaselagring.
+
+
+## Implementering av tilgjengelighet
+
+Nettstedet følger universelle utformingsprinsipper for å sikre tilgjengelighet:
+
+- Semantisk HTML: Brukte riktige HTML-koder for å formidle mening, og hjelpe skjermlesere.
+- Tastaturnavigering: All interaktiv tekstboks kan nås via tastaturet.
+- Kontrast og skriftstørrelse: Sikrer lesbar tekst med tilstrekkelig kontrast.
+- Alt tekst for bilder: Gir beskrivende tekst for bilder for å hjelpe synshemmede brukere.
+
+
+## Databasestruktur
+
+Prosjektet bruker Firebase Firestore til å lagre data:
+
+- Brukersamling: Lagrer brukerinformasjon som navn og e-post.
+- Menysamling (utilgjengelig for øyeblikket): Lagrer detaljer om tilgjengelige matvarer, som navn, beskrivelse, pris og tilgjengelighet.
+
+## Innlogging/Logg ut funksjonalitet
+
+- Pålogging: Brukere kan logge på med e-post og passord. Firebase Authentication styrer prosessen, og sikrer sikker tilgang.
+- Logg ut: Brukere kan logge ut.
+
+## Tilgang
+
+- Klikk på lenken i beskrivelsen for å få tilgang til nettstedet.

@@ -11,7 +11,7 @@ const firebaseConfig = {
     appId: "1:699730458810:web:162822e6cad5467f3e6a83"
   };
 
-  // Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage();
@@ -30,12 +30,12 @@ document.querySelector('.submit-btn').addEventListener('click', async (e) => {
     }
 
     try {
-        // Upload image to Firebase Storage
+
         const storageRef = ref(storage, `food_images/${foodImage.name}`);
         await uploadBytes(storageRef, foodImage);
         const imageUrl = await getDownloadURL(storageRef);
 
-        // Add food item to Firestore
+        
         await addDoc(collection(db, "weeklyMenu"), {
             name: foodName,
             description: foodDescription,
@@ -44,7 +44,7 @@ document.querySelector('.submit-btn').addEventListener('click', async (e) => {
         });
 
         alert('Food item added successfully!');
-        // Clear form fields
+       
         document.getElementById('foodName').value = '';
         document.getElementById('foodDescription').value = '';
         document.getElementById('foodPrice').value = '';

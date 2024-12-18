@@ -1,12 +1,11 @@
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
 
 const db = getFirestore();
 
 async function displayWeeklyMenu() {
     const menuContainer = document.getElementById('menuContainer');
-    menuContainer.innerHTML = ''; // Clear existing content
-
+    menuContainer.innerHTML = ''; 
     try {
         const querySnapshot = await getDocs(collection(db, "weeklyMenu"));
         querySnapshot.forEach((doc) => {
